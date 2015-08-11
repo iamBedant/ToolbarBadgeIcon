@@ -30,11 +30,21 @@
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New Button"
+            android:text="Update"
             android:id="@+id/button"
-            android:layout_below="@+id/appbar"
+            android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="166dp" />
+            android:layout_marginBottom="216dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/count"
+            android:layout_above="@+id/button"
+            android:layout_centerHorizontal="true"
+            android:text="10" />
 
 
     </RelativeLayout>

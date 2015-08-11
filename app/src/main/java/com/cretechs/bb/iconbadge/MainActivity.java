@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.mikepenz.actionitembadge.library.ActionItemBadge;
 import com.mikepenz.iconics.typeface.FontAwesome;
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
     Button button;
     Menu menu1;
 
+    EditText count;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,11 +32,13 @@ public class MainActivity extends AppCompatActivity {
         button = (Button) findViewById(R.id.button);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        count = (EditText) findViewById(R.id.count);
+
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updateItem(3);
+                updateItem(Integer.parseInt(count.getText().toString()));
             }
         });
     }
